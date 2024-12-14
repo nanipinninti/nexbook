@@ -1,11 +1,15 @@
 import './App.css';
-
+import { HashRouter,Route,Routes,Navigate } from 'react-router-dom';
+import { useState } from 'react';
+import Login from './components/Login'
 function App() {
   return (
-    <div className="App">
-      <p>Hello</p>
-      AyshANANIIIIII
-      Karri amme aparana
+    <div className="body">
+      <HashRouter>
+        <Routes>
+          <Route path='*' element = {<Login />}/>
+        </Routes>
+      </HashRouter>
     </div>
   );
 }

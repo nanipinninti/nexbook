@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import './index.css'
-const z = ()=>{
+const Signup = ()=>{
     return(
         "Hello"
     )
 }
-export default z;
+export default Signup;

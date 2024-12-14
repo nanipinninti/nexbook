@@ -1,15 +1,17 @@
 import './App.css';
-import { HashRouter,Route,Routes,Navigate } from 'react-router-dom';
+import { BrowserRouter,Route,Routes,Navigate } from 'react-router-dom';
 import { useState } from 'react';
 import Login from './components/Login'
+import Signup from './components/Signup'
 function App() {
   return (
     <div className="body">
-      <HashRouter>
+      <BrowserRouter>
         <Routes>
-          <Route path='*' element = {<Login />}/>
+          <Route path='/signup' element = {<Signup />}/>
+          <Route path='/login' element = {<Login />}/>
         </Routes>
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }

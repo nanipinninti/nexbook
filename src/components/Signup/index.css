@@ -41,12 +41,11 @@
     font-weight:600;
 
   }
-<<<<<<< HEAD
   
 .fill-this-field{
   border: 1px solid red;
 }
-=======
+
   .error-msg{
     color:red;
     font-size:10px;
@@ -64,4 +63,3 @@
     }
 
   }
->>>>>>> 99091c3d0afbdf9e7657e181ad59edda3a9999d0

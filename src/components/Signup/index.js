@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import { useState,useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import './index.css'
@@ -11,6 +12,19 @@ const Signup = ()=>{
        const [newPassword,setNewPassword]=useState('')
        const [submittedOnce,setSubmittedOnce] = useState(false)
        const [errorMsg,setErrorMsg] = useState('')
+=======
+import { useState } from "react";
+
+import './index.css'
+const Signup = ()=>{
+    const [name,setName]=useState('')
+    const [email,setEmail]=useState('')
+    const [number,setNumber]=useState('')
+    const [password,setPassword]=useState('')
+    const [newPassword,setNewPassword]=useState('')
+    
+
+>>>>>>> 99091c3d0afbdf9e7657e181ad59edda3a9999d0
 
        const check = ()=>{
               // Let's check user name

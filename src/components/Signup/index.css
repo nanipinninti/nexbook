@@ -41,7 +41,27 @@
     font-weight:600;
 
   }
+<<<<<<< HEAD
   
 .fill-this-field{
   border: 1px solid red;
 }
+=======
+  .error-msg{
+    color:red;
+    font-size:10px;
+    font-family:"Roboto";
+    align-self:flex-start;
+    margin-left:50px;
+}
+  @media screen and (max-width:576px){
+    .sign-up-form-container{
+        width:80%;
+
+    }
+    .sign-up-heading{
+        font-size:28px;
+    }
+
+  }
+>>>>>>> 99091c3d0afbdf9e7657e181ad59edda3a9999d0

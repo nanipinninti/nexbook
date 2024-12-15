@@ -1,5 +1,5 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 import './index.css'
 const Signup = ()=>{
@@ -8,6 +8,8 @@ const Signup = ()=>{
     const [number,setNumber]=useState('')
     const [password,setPassword]=useState('')
     const [newPassword,setNewPassword]=useState('')
+    
+
 
 
     return(

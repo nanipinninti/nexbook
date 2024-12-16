@@ -1,13 +1,13 @@
 .login-container{
     background-color: white;
     width: 350px;
-    padding : 20px 12px 20px 12px;
+    padding : 20px 18px 20px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
-    border-radius: 8px;
+    border-radius: 12px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -49,8 +49,8 @@
 }
 .error-msg{
     font-size: 10px;
-    color: red;
-    padding : 2px 0 0 3px;
+    color: #ff0b37;
+    padding : 3px 0 0 3px;
 }
 .login-bottom{
     font-size: 12px;

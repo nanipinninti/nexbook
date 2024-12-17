@@ -1,18 +1,20 @@
 .login-container{
     background-color: white;
     width: 350px;
-    padding : 20px 18px 20px 18px;
+    padding : 5px 18px 25px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
     border-radius: 12px;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
+    margin-top: 20px;
+    margin-bottom: 20px;    
+}
+.login-signup-web-logo{
+    height: auto;
+    width: 200px;
+    min-height: 10px;
 }
 .login-heading{
     font-size: 26px;
@@ -23,8 +25,11 @@
 .login-input{
     width: 100%;
     border-radius: 5px;
-    border: 1px solid gray;
+    border: 1px solid #bfbfbf;
+    background-color: #f5f5f5;
     padding: 5px;
+    padding-left: 8px;
+    margin-top: 5px;
     font-size: 16px;
     outline: none;
 }
@@ -46,6 +51,7 @@
     height: 50px;
 }
 .login-button{
+    margin-top: 10px;
 }
 .error-msg{
     font-size: 10px;
@@ -54,8 +60,46 @@
 }
 .login-bottom{
     font-size: 12px;
+    margin-bottom: 0px;
 }
 
 .fill-this-field{
-    border: 1px solid red;
+    border: 1px solid #ff0b37;
+}
+
+.separator-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.separator{
+    width: 40%;
+    border: 1px solid #a6a6a6;
+}
+.separator-text{
+    font-size: 12px;
+    margin: 0;
+    color : black;
+    font-weight: 450;
+}
+.google-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap : 10px;
+    width: 50%;
+    border: 1px solid #9302fb99;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding : 5px;
+    padding-left: 10px;
+}
+.google-text{
+    margin: 0;
+    font-size: 14px;
+}
+.google-icon{
+    width: 25px;
+    height: auto;
 }

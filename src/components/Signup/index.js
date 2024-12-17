@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate,Navigate } from "react-router-dom";
 import Cookies from "js-cookie";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 import "./index.css";
 
 const Signup = () => {
@@ -109,9 +111,42 @@ const onSubmit = async (event) => {
        }
 };
 
+    const onGoogleAccountSuccess = async (credentialResponse)=>{
+        const details = jwtDecode((credentialResponse.credential))
+        console.log(details)
+        const {email,name} = details 
+        const userDetails ={email,name} 
+        const api = "http://localhost:5000/googleaccess"          
+        const options ={
+            method : "POST",
+            headers: {
+                "Content-Type": "application/json", // Add this header
+            },
+            body : JSON.stringify(userDetails)
+        }
+        try{
+            const responce = await fetch(api,options)
+            const data = await responce.json()
+            if (responce.ok){
+                // console.log("Login success")
+                const login_token = data.token
+                Cookies.set("login_token",login_token,{ expires : 7})
+                navigate('/')
+            }
+            else{
+                // console.log("Login Fail")
+                setErrorMsg(`*${data.error}`)
+            }
+        }catch(error){
+            console.error(error)
+            setErrorMsg("Internal Servor error!")
+        }
+}
 return (
 <div className="sign-up-form-container">
-<p className="sign-up-heading">Registration</p>
+{/* <p className="sign-up-heading">Registration</p> */}
+<img src="https://i.postimg.cc/MKb6TcZV/nexbook-bg.jpg" className="login-signup-web-logo" 
+            alt="web-logo"/>
 
 {/* Name Input */}
 <div className="signup-login-input-total">
@@ -231,6 +266,21 @@ return (
        Already have an account?{" "}
        <span onClick={() => navigate("/login")}>Login</span>
 </p>
+
+<div className="separator-container">
+            <hr className="separator"/>
+            <p className="separator-text">OR</p>
+            <hr className="separator"/>
+        </div>
+        <GoogleLogin className="google-container" 
+            onSuccess={(credentialResponse)=>{
+                onGoogleAccountSuccess(credentialResponse)
+            }}
+            onError={()=>console.log("Login failed")}        
+        >
+            {/* <FcGoogle className="google-icon"/>
+            <p className="google-text">Continue with Google</p> */}
+        </GoogleLogin>
 </div>
 );
 };

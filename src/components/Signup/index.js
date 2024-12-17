@@ -81,7 +81,7 @@ const onSubmit = async (event) => {
 
        if (!nameErr && !emailErr && !numberErr && !passwordErr && !newPasswordErr) {
               setErrorMsg("");
-            const api = "http://localhost:5000/signup"
+            const api = "http://localhost:5001/signup"
             const userDetails = {
               name,email,number,password
             }

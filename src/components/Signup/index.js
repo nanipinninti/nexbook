@@ -144,7 +144,9 @@ const onSubmit = async (event) => {
 }
 return (
 <div className="sign-up-form-container">
-<p className="sign-up-heading">Registration</p>
+{/* <p className="sign-up-heading">Registration</p> */}
+<img src="https://i.postimg.cc/MKb6TcZV/nexbook-bg.jpg" className="login-signup-web-logo" 
+            alt="web-logo"/>
 
 {/* Name Input */}
 <div className="signup-login-input-total">

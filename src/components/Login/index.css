@@ -1,7 +1,7 @@
 .login-container{
     background-color: white;
     width: 350px;
-    padding : 20px 18px 20px 18px;
+    padding : 5px 18px 25px 18px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -10,6 +10,11 @@
     border-radius: 12px;
     margin-top: 20px;
     margin-bottom: 20px;    
+}
+.login-signup-web-logo{
+    height: auto;
+    width: 200px;
+    min-height: 10px;
 }
 .login-heading{
     font-size: 26px;
@@ -46,6 +51,7 @@
     height: 50px;
 }
 .login-button{
+    margin-top: 10px;
 }
 .error-msg{
     font-size: 10px;
@@ -74,7 +80,7 @@
 .separator-text{
     font-size: 12px;
     margin: 0;
-    color : #9502FB;
+    color : black;
     font-weight: 450;
 }
 .google-container{

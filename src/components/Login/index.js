@@ -117,8 +117,9 @@
 
     return (
     <div className="login-container">
-        <h1 className="login-heading">Login</h1>
-
+        {/* <h1 className="login-heading">Login</h1> */}
+        <img src="https://i.postimg.cc/MKb6TcZV/nexbook-bg.jpg" className="login-signup-web-logo" 
+            alt="web-logo"/>
         <div className="signup-login-input-total">
         <p className="login-signup-question">Email</p>
         <input

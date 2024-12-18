@@ -1,0 +1,78 @@
+.hotel-card-container {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #fff;
+  }
+  
+  .hotel-card-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+  
+  .hotel-card-name {
+    font-size: 1.5rem;
+    margin: 10px 15px;
+    color: #333;
+  }
+  
+  .hotel-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    
+  }
+  
+  .hotel-card-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #7a44ff;
+    padding-top: 13px;
+  }
+  
+  .hotel-card-details-shares-likes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+  
+  .hotel-card-icon {
+    font-size: 1.4rem;
+    margin-right: 5px;
+    color: #666;
+    cursor: pointer;
+    
+  }
+  
+  .hotel-card-noof-likes,
+  .hotel-card-noof-shares {
+    margin-right: 10px;
+    font-size: 1.3rem;
+    padding-top: 13px;
+    color: #666;
+  }
+  
+  .hotel-card-location {
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .icon-location {
+    font-size: 1.8rem;
+    margin-right: 8px;
+    color: #7a44ff;
+  }
+  
+  .hotel-card-address {
+    font-size: 1rem;
+    color: #555;
+    padding-top: 15px;
+  }
+  

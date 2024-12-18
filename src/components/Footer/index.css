@@ -1,0 +1,125 @@
+.footer-container{
+    background-color:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    padding:20px;
+   
+
+}
+.footer-details-section{
+    display:flex;
+    flex-direction:column;
+    width:40%;
+    padding:20px;
+}
+.footer-img-logo{
+    width:180px;
+    margin-bottom:20px;
+
+}
+.footer-thanking-msg{
+    color: #000000;
+    font-family:"Roboto";
+    font-size:18px;
+
+}
+.footer-social-media{
+    color:#a64dff;
+    font-family:"Roboto";
+    font-size:24px;
+    font-weight:800;
+
+}
+.footer-queries-msg{
+    color:#a64dff;
+    font-family:"Roboto";
+    font-size:24px;
+    font-weight:800;
+    padding-left:10px;
+    margin-bottom: 20px;
+
+}
+.footer-queries-section{
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    padding:20px;
+
+   
+}
+.footer-send-btn{
+    border:1px solid #a64dff;
+    background-color:transparent;
+    border-radius:10px;
+    width:110px;
+    height:40px;
+    margin:10px;
+    color:#000000;
+    cursor: pointer;
+    
+}
+.footer-input-field{
+    display:flex;
+    flex-direction:column;
+    margin:10px;
+}
+label{
+    color:#000000;
+    font-family:"Roboto";
+    font-size:15px;
+    font-weight:500;
+
+}
+.footer-icon{
+    width:50px;
+}
+.input-box{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #a64dff;
+    background-color:transparent;
+    padding: 10px;
+    padding-left: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+    color:#a64dff;
+
+}
+.footer-name-phn-container{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+    
+    
+}
+.footer-description-box{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #a64dff;
+    background-color:transparent;
+    padding: 5px;
+    padding-left: 8px;
+    margin-top: 5px;
+    font-size: 16px;
+    outline: none;
+    color:#a64dff;
+    margin-bottom:10px;
+
+}
+
+@media screen and (max-width:762px){
+    .footer-container{
+        flex-direction:column;
+    }
+    .footer-details-section{
+        width:90%;
+    }
+    .footer-queries-section{
+        width:90%;
+    }
+    .footer-name-phn-container{
+        flex-direction:column;
+    }
+}

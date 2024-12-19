@@ -49,7 +49,7 @@
 
         if (!emailErr && !passwordErr) {
             setErrorMsg("");
-            const api = "http://localhost:5000/login"
+            const api = "http://localhost:5001/login"
             const userDetails = {
                 email,password
               }
@@ -88,7 +88,7 @@
         console.log(details)
         const {email,name} = details 
         const userDetails ={email,name} 
-        const api = "http://localhost:5000/googleaccess"          
+        const api = "http://localhost:5001/googleaccess"          
         const options ={
             method : "POST",
             headers: {

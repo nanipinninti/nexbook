@@ -1,0 +1,26 @@
+.options-container{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    gap : 30px;
+    padding : 5px 25px 10px 35px;
+    background-color: #F5F5F5;
+    font-size: 15px;
+    height: 35 px;
+    
+}
+@media screen and (max-width : 578px) {
+    .options-container{
+        padding-left:30px ;
+    }
+}
+.link{
+    text-decoration: none;
+    color: black;
+}
+
+.active-link{
+    color : #9502FB;
+    text-decoration: none;
+}

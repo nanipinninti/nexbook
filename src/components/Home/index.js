@@ -4,6 +4,7 @@ import FunctionHalls from "../FunctionHalls";
 import './index.css'
 import Header from "../Header";
 import Footer from "../Footer";
+import Options from "../Options";
   
 const Home = ()=>{
     const sections = [
@@ -23,6 +24,7 @@ const Home = ()=>{
     return(
         <div className="home-container">
             <Header/>
+            <Options />
             <div className="function-halls-container">
             {
                 sections.map(obj=>(

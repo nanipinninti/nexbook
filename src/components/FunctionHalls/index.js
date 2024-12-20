@@ -2,10 +2,10 @@ import React from "react";
 import { useState ,useEffect} from "react";
 import HotelCard from "../HotelCard"
 import Loading from "../Loading";
+import Filter from "../Filter"; // Import the Filter component
 
 import { IoIosOptions } from "react-icons/io";
-import { MdKeyboardArrowRight } from "react-icons/md";
-import { MdKeyboardArrowLeft } from "react-icons/md";
+import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md"; // Correct import statement
 
 import './index.css'
 import { data } from "react-router-dom";
@@ -23,6 +23,7 @@ const FunctionHalls = (props)=>{
     const [showAll,setShowAll] = useState(false)
     const [totalHotels,setTotalHotels] = useState(0)
     const [status,setStatus] = useState(Names.loading)
+    const [showFilter, setShowFilter] = useState(false); // State to manage filter visibility
 
     useEffect(()=>{
         fetchDetail(api)
@@ -57,11 +58,21 @@ const FunctionHalls = (props)=>{
         <div className="function-hall-section-container">
             <div className="fh-section-header-container">
                 <h1 className="fh-section-head">{SectionDetails.name}</h1>
-                <div className="fh-section-filter">
+                <div className="fh-section-filter" onClick={() => setShowFilter(true)}>
                     <IoIosOptions className="fh-filter-option"/>
                     <p className="fh-filter-text">filter</p>
                 </div>
             </div>
+
+            {/* Filter Panel */}
+            {showFilter && (
+                <div className="filter-overlay">
+                    <div className="filter-popup">
+                        <Filter />
+                        <button className="close-filter" onClick={() => setShowFilter(false)}>Close</button>
+                    </div>
+                </div>
+            )}
 
             <div className={(showAll) ? `fh-card-show-all-true` : `fh-card`}>
             {

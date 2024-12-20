@@ -3,3 +3,9 @@
     height: 100vh;
     background-color: white;
 }
+.function-halls-container{
+    padding:10px 35px 5px 35px;
+    display: flex;
+    flex-direction: column;
+    gap : 50px;
+}

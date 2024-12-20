@@ -2,8 +2,8 @@
     import { useNavigate,Navigate } from "react-router-dom";
     import Cookies from "js-cookie";
     import { FcGoogle } from "react-icons/fc"; // Google icon
-    import { GoogleLogin } from "@react-oauth/google";
-    import {jwtDecode} from "jwt-decode"
+    import { GoogleLogin } from "@react-oauth/google"; //google auth
+    import {jwtDecode} from "jwt-decode" // google auth
     import './index.css';
 
 
@@ -184,6 +184,7 @@
             <p className="separator-text">OR</p>
             <hr className="separator"/>
         </div>
+        
         <GoogleLogin className="google-container" 
             onSuccess={(credentialResponse)=>{
                 onGoogleAccountSuccess(credentialResponse)

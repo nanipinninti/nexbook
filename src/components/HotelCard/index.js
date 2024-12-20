@@ -1,5 +1,7 @@
 import React from "react";
-import { FaHeart, FaShareAlt, FaMapMarkerAlt } from "react-icons/fa";
+import { CiHeart } from "react-icons/ci";
+import { CiShare2 } from "react-icons/ci";
+import { MdLocationOn } from "react-icons/md";
 import './index.css';
 
 const data = {
@@ -14,26 +16,33 @@ const data = {
   shares: 0,
 };
 
-const HotelCard = () => {
-  const { name, price, address, image_url, likes, shares } = data;
-
+const HotelCard = (props) => {
+  const {hotelDetails} = props
+  const { name, price, address, image_url } = hotelDetails;
+  const likes = 0
+  const shares = 0
   return (
     <div className="hotel-card-container">
-      <img src={image_url} alt={name} className="hotel-card-image" />
-      <h1 className="hotel-card-name">{name}</h1>
-      <div className="hotel-card-details">
-        <p className="hotel-card-price">₹ {price} /-</p>
-        <div className="hotel-card-details-shares-likes">
-          <FaHeart className="hotel-card-icon" />
-          <p className="hotel-card-noof-likes">{likes}</p>
-          <FaShareAlt className="hotel-card-icon" />
-          <p className="hotel-card-noof-shares">{shares}</p>
+        <img src={image_url} alt={name} className="hotel-card-image" />
+
+        <h1 className="hotel-card-name">{name}</h1>
+
+        <div className="hotel-card-details">
+            <p className="hotel-card-price">₹ {price}</p>
+            <div className="hotel-card-details-shares-likes">
+
+                <CiHeart className="hotel-card-icon" />
+                <p className="hotel-card-noof-likes">{likes}</p>
+                <CiShare2 className="hotel-card-icon" />
+
+                <p className="hotel-card-noof-shares">{shares}</p>
+            </div>
         </div>
-      </div>
-      <div className="hotel-card-location">
-        <FaMapMarkerAlt className="icon-location" />
-        <p className="hotel-card-address">{address}</p>
-      </div>
+
+        <div className="hotel-card-location">
+          <MdLocationOn className="icon-location" />
+          <p className="hotel-card-address">{address}</p>
+        </div>
     </div>
   );
 };

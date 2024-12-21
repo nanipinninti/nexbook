@@ -2,7 +2,7 @@ import React from "react";
 import { useState ,useEffect} from "react";
 import HotelCard from "../HotelCard"
 import Loading from "../Loading";
-import Filter from "../Filter"; // Import the Filter component
+import Popup from "reactjs-popup";
 
 import { IoIosOptions } from "react-icons/io";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md"; // Correct import statement
@@ -23,7 +23,6 @@ const FunctionHalls = (props)=>{
     const [showAll,setShowAll] = useState(false)
     const [totalHotels,setTotalHotels] = useState(0)
     const [status,setStatus] = useState(Names.loading)
-    const [showFilter, setShowFilter] = useState(false); // State to manage filter visibility
 
     useEffect(()=>{
         fetchDetail(api)
@@ -54,25 +53,38 @@ const FunctionHalls = (props)=>{
             console.log("Unable to make request:", error.message);
         }
     };
+
+    const filterPopup = ()=>{
+        return(
+            <div>
+                <Popup
+                    modal
+                    trigger={
+                        <div className="fh-section-filter" >
+                            <IoIosOptions className="fh-filter-option"/>
+                            <p className="fh-filter-text">filter</p>
+                        </div>
+                    }
+                >
+                {close=>(
+                    <div>
+                        
+                    </div>
+                    )
+                }
+                </Popup>
+            </div>
+        )
+    }
     return(
         <div className="function-hall-section-container">
             <div className="fh-section-header-container">
                 <h1 className="fh-section-head">{SectionDetails.name}</h1>
-                <div className="fh-section-filter" onClick={() => setShowFilter(true)}>
-                    <IoIosOptions className="fh-filter-option"/>
-                    <p className="fh-filter-text">filter</p>
-                </div>
+                {
+                    filterPopup()
+                }
             </div>
-
-            {/* Filter Panel */}
-            {showFilter && (
-                <div className="filter-overlay">
-                    <div className="filter-popup">
-                        <Filter />
-                        <button className="close-filter" onClick={() => setShowFilter(false)}>Close</button>
-                    </div>
-                </div>
-            )}
+            
 
             <div className={(showAll) ? `fh-card-show-all-true` : `fh-card`}>
             {

@@ -16,6 +16,11 @@
     font-size: 24px;
     font-weight: 450;
 }
+@media screen and (max-width : 578px) {
+    .fh-section-head{
+        font-size: 20px;
+    }
+}
 
 .fh-section-filter{
     display: flex;
@@ -82,9 +87,66 @@
     background: white;
     padding: 20px;
     border-radius: 8px;
-    width: 80%;
-    max-width: 500px;
+    width: 300px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-popup-option {
+    display: flex;
+    flex-direction: column;
+    padding : 5px;
+}
+.filter-popup-option label{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.filter-popup-option input{
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding : 5px;
+}
+.filter-popup-option input:focus {
+    border-color: #9502FB; /* Purple border on focus */
+    outline: none;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #b00;
+}
+
+.filter-popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.ok-button, .close-button {
+    width: 40%;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.ok-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.close-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
 }
 
 .close-filter {

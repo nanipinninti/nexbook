@@ -4,52 +4,43 @@
     justify-content:space-between;
     align-items:flex-start;
     padding:20px;
-
-
+    padding-top: 0px;
 }
 .footer-details-section{
     display:flex;
     flex-direction:column;
     width:40%;
-    padding:20px;
+    padding:10px;
 }
 .footer-img-logo{
     width:180px;
     margin-bottom:20px;
-
 }
 .footer-thanking-msg{
     color: #000000;
-    font-family:"Roboto";
-    font-size:18px;
-
+    font-size:16px;
+    font-weight:400;
 }
 .footer-social-media{
     color:#a64dff;
-    font-family:"Roboto";
-    font-size:24px;
-    font-weight:800;
-
+    font-size:20px;
+    font-weight:500;
 }
 .footer-queries-msg{
     color:#a64dff;
-    font-family:"Roboto";
-    font-size:24px;
-    font-weight:800;
+    font-size:20px;
+    font-weight:500;
     padding-left:10px;
     margin-bottom: 20px;
-
 }
 .footer-queries-section{
     display:flex;
     flex-direction:column;
     width:50%;
-    padding:20px;
-
-
+    padding:0px;
 }
 .footer-send-btn{
-    border:1px solid #a64dff;
+    border: none;
     background-color:transparent;
     border-radius:10px;
     width:110px;
@@ -57,7 +48,8 @@
     margin:10px;
     color:#000000;
     cursor: pointer;
-    
+    background-color: #6A5ACD;
+    color: white;
 }
 .footer-input-field{
     display:flex;
@@ -66,10 +58,8 @@
 }
 label{
     color:#000000;
-    font-family:"Roboto";
     font-size:15px;
-    font-weight:500;
-
+    font-weight:400;
 }
 .footer-icon{
     width:50px;
@@ -77,27 +67,23 @@ label{
 .input-box{
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #a64dff;
+    border: 1px solid #979393f1; /* Changed to gray */
     background-color:transparent;
     padding: 10px;
     padding-left: 8px;
     margin-top: 5px;
     font-size: 16px;
     outline: none;
-    color:#a64dff;
-
 }
 .footer-name-phn-container{
     display:flex;
     flex-direction:row;
     width:100%;
-    
-    
 }
 .footer-description-box{
     width: 100%;
     border-radius: 5px;
-    border: 1px solid #a64dff;
+    border: 1px solid #ccc; /* Changed to gray */
     background-color:transparent;
     padding: 5px;
     padding-left: 8px;
@@ -106,7 +92,6 @@ label{
     outline: none;
     color:#a64dff;
     margin-bottom:10px;
-
 }
 
 @media screen and (max-width:762px){
@@ -122,4 +107,10 @@ label{
     .footer-name-phn-container{
         flex-direction:column;
     }
+}
+.footer-seaparator{ 
+    width: 100;
+    height:1px;
+    background-color:#a64dff;
+    margin: 30px 25px 20px 25px;
 }

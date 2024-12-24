@@ -16,6 +16,11 @@
     font-size: 24px;
     font-weight: 450;
 }
+@media screen and (max-width : 578px) {
+    .fh-section-head{
+        font-size: 20px;
+    }
+}
 
 .fh-section-filter{
     display: flex;

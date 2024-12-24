@@ -26,6 +26,24 @@
     font-size:20px;
     font-weight:500;
 }
+.footer-social-media-icons{
+    display: flex;
+    gap: 10px;
+}
+.footer-social-icon{
+    font-size: 24px;
+    
+}
+#whatsapp-icon{
+    color: green;
+}
+#facebook-icon{
+    color: blue;
+}
+#instagram-icon{
+    color: rgb(110, 4, 40);
+}
+
 .footer-queries-msg{
     color:#a64dff;
     font-size:20px;

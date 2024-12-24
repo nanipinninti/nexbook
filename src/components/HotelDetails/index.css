@@ -43,34 +43,21 @@
 }
 .hall-name{
     color:#000000;
-<<<<<<< HEAD
     font-family:"Roboto";
     font-size:26px;
     font-weight:600
-=======
->>>>>>> 59d675d3798dbcbe2b8341fc6adac919bc3184b5
     
 }
 .hall-price{
     color:#9502FB;
-<<<<<<< HEAD
     font-family:"Roboto";
     font-size:22px;
 }
-=======
-}
-.hotel-details-address{
-    color:#808080;
->>>>>>> 59d675d3798dbcbe2b8341fc6adac919bc3184b5
 
 .hall-description{
-<<<<<<< HEAD
     color:#333333;
     font-family:"Roboto";
     font-size:17px;
-=======
-    color:#3232CF;
->>>>>>> 59d675d3798dbcbe2b8341fc6adac919bc3184b5
 
 }
 .hotel-details-icon{
@@ -86,12 +73,8 @@
     border-radius:13px;
     height:40px;
     width:120px;
-<<<<<<< HEAD
     font-family:"Roboto";
     font-size:13px;
-=======
-    font-size:10px;
->>>>>>> 59d675d3798dbcbe2b8341fc6adac919bc3184b5
     margin:10px;
     margin-top:20px;
 }

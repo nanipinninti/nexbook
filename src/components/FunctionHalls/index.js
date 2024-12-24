@@ -87,6 +87,10 @@ const FunctionHalls = (props)=>{
                 >
                 {close => (
                     <div className="filter-popup">
+                         <div className="filter-popup-option">
+                            <label>Date</label>
+                            <input type="date" id="date" placeholder="select Date" required/>
+                        </div>
                         <div className="filter-popup-option">
                             <label>Capacity</label>
                             <input id="capacity"

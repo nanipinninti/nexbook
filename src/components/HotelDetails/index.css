@@ -9,7 +9,8 @@
 .hotel-details-bottom-container{
     display:flex;
     flex-direction:row;
-    justify-content:center;
+    justify-content:flex-start;
+
     padding:20px;
     width:100%;
     gap: 20px;
@@ -19,20 +20,23 @@
     
 }
 .hotel-details-image{
-    width:70%;
+    width:60%;
     height:400px;
-    background-size: cover;
+    object-fit: cover; 
     
+    margin:0px;
     
 }
 
 .hall-details-container{
     border:1px solid #808080;
     border-radius:6px;
-    padding:20px;
+    padding:10px;
     display:flex;
     flex-direction:column;
     width:40%;
+    margin:0px;
+    
     
     
 
@@ -40,42 +44,37 @@
 .hall-name{
     color:#000000;
     font-family:"Roboto";
+    font-size:26px;
+    font-weight:600
     
 }
 .hall-price{
     color:#9502FB;
     font-family:"Roboto";
+    font-size:22px;
 }
-.hotel-details-address{
-    color:#808080;
-    font-family:"Roboto";
 
-}
-.hotel-details-icon-location{
-    margin :0 ;
-    font-size: 20px;
-    margin-right: 5px;
-    color: #000000;
-}
 .hall-description{
-    color:#3232CF;
+    color:#333333;
     font-family:"Roboto";
+    font-size:17px;
 
 }
-.hotel-details-like-icon{
+.hotel-details-icon{
     margin-right: 5px;
     color: black;
     cursor: pointer;
+    font-size:24px;
 }
 .hotel-details-btn{
     color:#ffffff;
     background-color: #666699;
     border:none;
     border-radius:13px;
-    height:30px;
+    height:40px;
     width:120px;
     font-family:"Roboto";
-    font-size:10px;
+    font-size:13px;
     margin:10px;
     margin-top:20px;
 }
@@ -85,27 +84,46 @@
     
     
 }
-.likes-continer{
+.likes-container{
     display:flex;
     align-items:center;
     margin-right:20px;
 }
-.shares-continer{
+.shares-container{
     display:flex;
     align-items:center;
 
 }
 .hotel-details-noof-likes{
     margin-right: 10px;
-    font-size: 16px;
+    font-size: 20px;
     padding-top: 13px;
     color: black;
+    padding-right:5px;
 
 }
-.hotel-details-address-continer{
-    display:flex;
-
+.hotel-details-address-container {
+    display: flex;
+    
+    margin-bottom:5px; 
 }
+
+.hotel-details-icon-location {
+    font-size: 28px;
+    margin-right: 5px;
+    color: #000000;
+    position: relative; 
+    padding-bottom:5px;
+}
+
+.hotel-details-address {
+    color: #808080;
+    font-family: "Roboto";
+    font-size: 16px;
+     /* Matches the text's vertical rhythm */
+}
+
+
 .hotel-details-name-price-container{
     display:flex;
     justify-content:space-between;
@@ -113,6 +131,44 @@
     margin-bottom:10px;
     margin-top:20px;
 }
+.hotel-details-date-input{
+    width: 150px;
+    height:40px;
+    padding:10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color:transparent;
+    margin-left:auto;
+    outline:none;
+    }
+    .date-input-container {
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: fit-content;
+      }
+      
+      .calendar-icon {
+        position: absolute;
+        left: 10px; /* Adjust as needed */
+        font-size: 16px;
+        color: #666699;
+      }
+      
+      .hotel-details-date-input {
+        padding-left: 30px; /* Add padding to make space for the icon */
+        border: none; /* Remove border */
+        background: transparent; /* Transparent background */
+        font-size: 14px;
+        outline: none; /* Remove the focus outline */
+        height: 30px; /* Adjust height as needed */
+        border-radius: 5px; /* Optional for rounded corners */
+      }
+      span{
+        color:#000000
+      }
+      
 @media screen and (max-width: 992px) {
     .hotel-details-image {
         width: 100%;
@@ -124,7 +180,7 @@
     }
 
     .hall-details-container {
-        width: 100%; /* Full width on medium and small devices */
+        width: 100%; 
         padding: 15px;
         
     }
@@ -132,6 +188,13 @@
     .hotel-details-btn {
         height: 40px; 
         font-size: 14px; 
+    }
+    .hall-price{
+        font-size:20px;
+    }
+    .hall-name{
+        font-size:23px;
+
     }
 }
 

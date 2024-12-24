@@ -1,6 +1,10 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import './index.css'
+
 
 const Footer = () => {
     const [username, setUsername] = useState('');
@@ -27,10 +31,10 @@ const Footer = () => {
                     <div>
                         <p className="footer-social-media">Social Media</p>
                         <div className="footer-social-media-icons">
-                            <FontAwesomeIcon icon={["fab", "facebook"]} className="footer-icon" />
-                            <FontAwesomeIcon icon={["fab", "twitter"]} className="footer-icon" />
-                            <FontAwesomeIcon icon={["fab", "instagram"]} className="footer-icon" />
-                            <FontAwesomeIcon icon={["fab", "youtube"]} className="footer-icon" />
+                           <FaWhatsapp className="footer-social-icon whatsapp" id="whatsapp-icon"/>
+                           <FaFacebook className="footer-social-icon" id="facebook-icon"/>
+                           <FaInstagram className="footer-social-icon" id="instagram-icon" />
+                           <FaXTwitter className="footer-social-icon"/>
                         </div>
                     </div>
 

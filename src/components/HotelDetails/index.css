@@ -39,16 +39,13 @@
 }
 .hall-name{
     color:#000000;
-    font-family:"Roboto";
     
 }
 .hall-price{
     color:#9502FB;
-    font-family:"Roboto";
 }
 .hotel-details-address{
     color:#808080;
-    font-family:"Roboto";
 
 }
 .hotel-details-icon-location{
@@ -59,7 +56,6 @@
 }
 .hall-description{
     color:#3232CF;
-    font-family:"Roboto";
 
 }
 .hotel-details-like-icon{
@@ -74,7 +70,6 @@
     border-radius:13px;
     height:30px;
     width:120px;
-    font-family:"Roboto";
     font-size:10px;
     margin:10px;
     margin-top:20px;

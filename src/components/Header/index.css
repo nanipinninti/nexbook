@@ -139,3 +139,15 @@
         width: auto;
     }
 }
+
+.profile-container{
+    position: fixed;
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    top: 70px;
+    right : 60px;
+    z-index: 100;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}

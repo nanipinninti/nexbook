@@ -35,7 +35,7 @@ const Header = () => {
 
             {/* Profile */}
             <div className="profile-container">
-
+                ..
             </div>
         </div>
     );

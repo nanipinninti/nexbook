@@ -10,15 +10,15 @@ const Home = ()=>{
     const sections = [
         {
             name: "Birthday Party",
-            api: "http://localhost:5001/function-halls/birthday-hotels",
+            api: "http://localhost:5001/function-halls/queries/birthday-hotels",
         },
         {
             name: "Corporate Party",
-            api: "http://localhost:5001/function-halls/corporate-hotels",
+            api: "http://localhost:5001/function-halls/queries/corporate-hotels",
         },
         {
             name: "Private Theater",
-            api: "http://localhost:5001/function-halls/private-theater-hotels",
+            api: "http://localhost:5001/function-halls/queries/private-theater-hotels",
         },
     ];
     return(
@@ -28,7 +28,7 @@ const Home = ()=>{
             <div className="function-halls-container">
             {
                 sections.map(obj=>(
-                    <FunctionHalls SectionDetails = {obj} />
+                    <FunctionHalls key={obj.id} SectionDetails = {obj} />
                 ))
             }
             </div>

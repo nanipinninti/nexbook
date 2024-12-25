@@ -83,7 +83,7 @@ const onSubmit = async (event) => {
 
        if (!nameErr && !emailErr && !numberErr && !passwordErr && !newPasswordErr) {
               setErrorMsg("");
-            const api = "http://localhost:5001/signup"
+            const api = "http://localhost:5001/users/signup"
             const userDetails = {
               name,email,number,password
             }
@@ -116,7 +116,7 @@ const onSubmit = async (event) => {
         console.log(details)
         const {email,name} = details 
         const userDetails ={email,name} 
-        const api = "http://localhost:5000/googleaccess"          
+        const api = "http://localhost:5001/users/login/googleaccess"          
         const options ={
             method : "POST",
             headers: {

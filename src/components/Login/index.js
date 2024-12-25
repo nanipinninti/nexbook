@@ -49,7 +49,7 @@
 
         if (!emailErr && !passwordErr) {
             setErrorMsg("");
-            const api = "http://localhost:5001/login"
+            const api = "http://localhost:5001/users/login"
             const userDetails = {
                 email,password
               }
@@ -86,9 +86,9 @@
     const onGoogleAccountSuccess = async (credentialResponse)=>{
         const details = jwtDecode((credentialResponse.credential))
         console.log(details)
-        const {email,name} = details 
-        const userDetails ={email,name} 
-        const api = "http://localhost:5001/googleaccess"          
+        const {email,name,picture} = details 
+        const userDetails ={email,name,picture}
+        const api = "http://localhost:5001/users/login/googleaccess"          
         const options ={
             method : "POST",
             headers: {

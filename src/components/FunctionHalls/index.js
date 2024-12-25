@@ -26,16 +26,18 @@ const FunctionHalls = (props)=>{
     const [capacity,setCapacity] = useState('')
     const [price,setPrice] = useState('')
     const [city,setCity] = useState('')
+    const [date, setDate] = useState('')
 
     const [tempCapacity, setTempCapacity] = useState(capacity);
     const [tempPrice, setTempPrice] = useState(price);
     const [tempCity, setTempCity] = useState(city);
+    const [tempDate, setTempDate] = useState(date);
 
     useEffect(()=>{
-        fetchDetail(api, capacity, price, city)
-    },[api,showAll, capacity, price, city])
+        fetchDetail(api, capacity, price, city, date)
+    },[api,showAll, capacity, price, city, date])
 
-    const fetchDetail = async (api, capacity, price, city) => {
+    const fetchDetail = async (api, capacity, price, city, date) => {
         const options = {
             method: "GET"
         };
@@ -43,6 +45,7 @@ const FunctionHalls = (props)=>{
         if (capacity) url.searchParams.append('capacity', capacity);
         if (price) url.searchParams.append('price', price);
         if (city) url.searchParams.append('city', city);
+        if (date) url.searchParams.append('date', date);
     
         try {
             const response = await fetch(url, options);
@@ -71,6 +74,7 @@ const FunctionHalls = (props)=>{
         setCapacity(tempCapacity);
         setPrice(tempPrice);
         setCity(tempCity);
+        setDate(tempDate);
     };
 
     const filterPopup = ()=> {
@@ -87,9 +91,10 @@ const FunctionHalls = (props)=>{
                 >
                 {close => (
                     <div className="filter-popup">
-                         <div className="filter-popup-option">
+                        <div className="filter-popup-option">
                             <label>Date</label>
-                            <input type="date" id="date" placeholder="select Date" required/>
+                            <input type="date" id="date" placeholder="select Date" required
+                                value={tempDate} onChange={e => setTempDate(e.target.value)} />
                         </div>
                         <div className="filter-popup-option">
                             <label>Capacity</label>

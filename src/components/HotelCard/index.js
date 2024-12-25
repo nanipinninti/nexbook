@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { CiHeart } from "react-icons/ci";
 import { CiShare2 } from "react-icons/ci";
 import { MdLocationOn } from "react-icons/md";
@@ -18,11 +19,14 @@ const data = {
 
 const HotelCard = (props) => {
   const {hotelDetails} = props
-  const { name, price, address, image_url } = hotelDetails;
+  const { hotel_id,name, price, address, image_url } = hotelDetails;
+  // console.log(hotelDetails);
+  
   const likes = 0
   const shares = 0
+  const navigate = useNavigate();
   return (
-    <div className="hotel-card-container">
+    <div className="hotel-card-container" onClick={() => navigate(`/hotel-details/${hotel_id}`)}>
         <img src={image_url} alt={name} className="hotel-card-image" />
 
         <h1 className="hotel-card-name">{name}</h1>

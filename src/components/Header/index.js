@@ -32,6 +32,7 @@ const Header = () => {
             <div className="header-right-mobile">
                     <RxHamburgerMenu className="options-icon"/>
             </div>
+            
         </div>
     );
 };

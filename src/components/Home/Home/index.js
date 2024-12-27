@@ -2,9 +2,9 @@ import React from "react";
 import { useState } from "react";
 import FunctionHalls from "../FunctionHalls";
 import './index.css'
-import Header from "../Header";
-import Footer from "../Footer";
-import Options from "../Options";
+import Header from "../../Header";
+import Footer from "../../Footer";
+import Options from "../../Options";
   
 const Home = ()=>{
     const sections = [
@@ -24,7 +24,7 @@ const Home = ()=>{
     return(
         <div className="home-container">
             <Header/>
-            <Options />
+            <Options active = "/" />
             <div className="function-halls-container">
             {
                 sections.map(obj=>(

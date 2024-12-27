@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './index.css';
+import Cookies from "js-cookie"
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { GoGift } from "react-icons/go";
@@ -19,10 +21,14 @@ const Header = () => {
     const displayProfile = () => {
         setIsDisplay(!isDisplay);
     };
-
+    const navigate = useNavigate();
+    const logout = ()=>{
+        Cookies.remove("login_token")
+        navigate("/login")
+    }   
     return (
         <div className="header">
-            <div className="header-left">
+            <div className="header-left" onClick={()=>navigate("/")}>
                 <img src="https://i.postimg.cc/MKb6TcZV/nexbook-bg.jpg" className="header-logo" alt="placeholder" />
                 <img src="https://i.postimg.cc/JhBzS7fG/nexbook-mb-bg.jpg" className="header-logo-mb" alt="placeholder" />  
 
@@ -79,9 +85,9 @@ const Header = () => {
                 <p className="profile-popup-text">Vouchers</p>
                 </div>
                 <hr/>
-                <div className="profile-popup-text-container">
-                <AiOutlineLogout className="popup-logout-icon" />
-                <p className="profile-popup-text">Logout</p>
+                <div className="profile-popup-text-container" onClick={logout}>
+                    <AiOutlineLogout className="popup-logout-icon" />
+                    <p className="profile-popup-text">Logout</p>
                 </div>
                 
                 

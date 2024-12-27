@@ -1,0 +1,89 @@
+.hotel-card-container {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: white;
+    height: 310px;
+    width: 350px;
+  }
+@media screen and (max-width : 578px) {
+  .hotel-card-container{
+      width: 100%;
+  }
+}
+  
+  .hotel-card-image {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+  }
+  
+  .hotel-card-name {
+    font-size: 18px;
+    color: black;
+    padding-left: 10px;
+    margin-top: 10px;
+  }
+  
+  .hotel-card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    padding: 0 10px;
+    font-size: 17px;
+    
+  }
+  
+  .hotel-card-price {
+    color: #7a44ff;
+    margin: 0;
+  }
+  
+  .hotel-card-details-shares-likes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+   
+  }
+  
+  .hotel-card-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    color: black;
+    cursor: pointer;
+    
+  }
+  
+  .hotel-card-noof-likes,
+  .hotel-card-noof-shares {
+    margin-right: 10px;
+    font-size: 16px;
+    padding-top: 13px;
+    color: black;
+  }
+  
+  .hotel-card-location {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+  }
+  
+  .icon-location {
+    margin :0 ;
+    font-size: 20px;
+    margin-right: 8px;
+    color: #7a44ff;
+  }
+  
+  .hotel-card-address {
+    margin: 0;
+    color: black;
+    
+  }
+
+  

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState ,useEffect} from "react";
-import HotelCard from "../HotelCard"
-import Loading from "../Loading";
+import HotelCard from "../StadiumCard"
+import Loading from "../../Loading";
 import Popup from "reactjs-popup";
 import { IoIosOptions } from "react-icons/io";
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from "react-icons/md";
@@ -15,7 +15,7 @@ const Names = {
     active : "active",
     failure : "failure"
 }
-const FunctionHalls = (props)=>{ 
+const Stadiums = (props)=>{ 
     const {SectionDetails} = props
 
     const [hotelDetails,setHotelDetails] = useState([])
@@ -172,4 +172,4 @@ const FunctionHalls = (props)=>{
         </div>
     )
 }
-export default FunctionHalls;
+export default Stadiums;

@@ -141,7 +141,7 @@
 }
 
 .profile-container{
-    position: fixed;
+    position: absolute;
     background-color: white;
     width: 300px;
     min-height:450px;
@@ -170,7 +170,6 @@
 }
 .profile-popup-name{
     color:#000000;
-    font-family: "Roboto";
     font-size:19px;
     font-weight:600;
     margin:0px;
@@ -178,14 +177,12 @@
 }
 .profile-popup-text{
     color:#4d4d4d;
-    font-family: "Roboto";
     font-size:17px;
     margin:0px;
     
 }
 .profile-popup-mail{
     color:#8c8c8c;
-    font-family: "Roboto";
     font-size:14px;
    
 }
